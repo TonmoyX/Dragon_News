@@ -9,7 +9,7 @@ const LoginPage = () => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget)
         const userData = Object.fromEntries(formData.entries())
-
+        
         const { data, error } = await authClient.signIn.email({
             email: userData.email,
             password: userData.password,
@@ -18,6 +18,7 @@ const LoginPage = () => {
 
     }
     return (
+
         <div className='flex flex-col mx-auto justify-center mt-20'>
             <form onSubmit={handleSubmitFunc}>
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">

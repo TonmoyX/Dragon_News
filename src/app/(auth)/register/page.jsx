@@ -17,6 +17,7 @@ const RegisterPage = () => {
           email : userData.email,
           password : userData.password,
         });
+        console.log(data)
         if(data.user){
             redirect(`/category/${redirectId}`, RedirectType.push)
         }

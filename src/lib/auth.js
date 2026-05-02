@@ -3,7 +3,7 @@ import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
 const client = new MongoClient(process.env.NEWS_URI);
-const db = client.db();
+const db = client.db(`NewsDragon`);
 
 export const auth = betterAuth({
      emailAndPassword: { 
